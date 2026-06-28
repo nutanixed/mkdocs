@@ -1,0 +1,26 @@
+site_name: NTNXLABS DOCS
+site_url: http://localhost:8000
+theme:
+  name: material
+  logo: assets/logo.png
+  favicon: assets/favicon.svg
+  features:
+    - content.code.copy
+  palette:
+    - scheme: default
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+      primary: blue
+      accent: light blue
+    - scheme: slate
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+      primary: blue
+      accent: light blue
+extra_css:
+  - assets/custom.css
+extra_javascript:
+  - assets/nav-privacy.js
+  - assets/logoff-button.js

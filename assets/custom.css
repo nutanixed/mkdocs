@@ -1,0 +1,224 @@
+/* Make main content area wider for large code blocks */
+.md-grid {
+  max-width: 96rem;
+}
+
+/* Obsidian-like color tuning on top of Material theme */
+:root {
+  --md-default-bg-color: #101418;
+  --md-default-fg-color: #d7dde5;
+  --md-default-fg-color--light: #aeb8c4;
+  --md-default-fg-color--lighter: #8893a2;
+  --md-accent-fg-color: #8ab4ff;
+}
+
+/* Keep light mode readable while still matching the palette vibe */
+[data-md-color-scheme="default"] {
+  --md-default-bg-color: #f7f9fc;
+  --md-default-fg-color: #1f2937;
+  --md-default-fg-color--light: #4b5563;
+  --md-default-fg-color--lighter: #6b7280;
+  --md-accent-fg-color: #3b82f6;
+}
+
+/* Let content use full available width */
+.md-content {
+  max-width: 100%;
+}
+
+/* Visual wrap only: preserves source text for copy/paste. */
+.md-typeset pre {
+  max-width: 100%;
+  overflow-x: hidden;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+.md-typeset pre code {
+  white-space: inherit;
+}
+
+/* Obsidian-like panels and surfaces */
+.md-typeset table:not([class]) {
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+[data-md-color-scheme="slate"] .md-typeset pre,
+[data-md-color-scheme="slate"] .md-typeset table:not([class]),
+[data-md-color-scheme="slate"] .md-typeset .admonition,
+[data-md-color-scheme="slate"] .md-typeset details {
+  background: #151b22;
+  border: 1px solid #263140;
+  border-radius: 0.5rem;
+}
+
+/* Callouts closer to Obsidian card feel */
+.md-typeset .admonition,
+.md-typeset details {
+  border-radius: 0.5rem;
+}
+
+/* Softer heading rhythm */
+.md-typeset h2,
+.md-typeset h3,
+.md-typeset h4 {
+  letter-spacing: 0.01em;
+}
+
+/* Stronger Obsidian-like layout styling (clearly visible). */
+[data-md-color-scheme="slate"] .md-header {
+  background: #111827;
+  border-bottom: 1px solid #2b3648;
+}
+
+[data-md-color-scheme="slate"] .md-sidebar,
+[data-md-color-scheme="slate"] .md-sidebar__scrollwrap {
+  background: #0f141a;
+}
+
+[data-md-color-scheme="slate"] .md-main {
+  background: #10161d;
+}
+
+[data-md-color-scheme="slate"] .md-content__inner {
+  background: #151b22;
+  border: 1px solid #263140;
+  border-radius: 0.75rem;
+  padding: 1.25rem;
+}
+
+/* Make selected nav entries pop like Obsidian active file. */
+.md-nav__link--active {
+  font-weight: 700;
+}
+
+/* Make the portal styling clearly visible in BOTH modes. */
+[data-md-color-scheme="default"] .md-header {
+  background: #e9eef8;
+  border-bottom: 1px solid #c8d4ea;
+}
+
+[data-md-color-scheme="default"] .md-sidebar,
+[data-md-color-scheme="default"] .md-sidebar__scrollwrap {
+  background: #f3f6fc;
+}
+
+[data-md-color-scheme="default"] .md-main {
+  background: #eef3fb;
+}
+
+[data-md-color-scheme="default"] .md-content__inner {
+  background: #ffffff;
+  border: 1px solid #d8e1f0;
+  border-radius: 0.75rem;
+  padding: 1.25rem;
+}
+
+/* Second pass: closer Obsidian typography and nav density. */
+.md-typeset {
+  font-size: 0.88rem;
+  line-height: 1.7;
+}
+
+.md-typeset h1 {
+  font-size: 1.9rem;
+  font-weight: 700;
+}
+
+.md-typeset h2 {
+  font-size: 1.45rem;
+  font-weight: 700;
+  margin-top: 1.8rem;
+}
+
+.md-typeset h3 {
+  font-size: 1.15rem;
+  font-weight: 650;
+  margin-top: 1.35rem;
+}
+
+.md-nav {
+  font-size: 0.82rem;
+}
+
+.md-nav__link {
+  margin-top: 0.08rem;
+  margin-bottom: 0.08rem;
+  padding-top: 0.2rem;
+  padding-bottom: 0.2rem;
+  border-radius: 0.3rem;
+}
+
+[data-md-color-scheme="slate"] .md-nav__link--active,
+[data-md-color-scheme="slate"] .md-nav__link:hover {
+  background: rgba(138, 180, 255, 0.12);
+}
+
+[data-md-color-scheme="default"] .md-nav__link--active,
+[data-md-color-scheme="default"] .md-nav__link:hover {
+  background: rgba(59, 130, 246, 0.1);
+}
+
+/* Obsidian-like callout accents by admonition type. */
+.md-typeset .admonition.note,
+.md-typeset details.note {
+  border-left: 0.24rem solid #60a5fa;
+}
+
+.md-typeset .admonition.tip,
+.md-typeset details.tip,
+.md-typeset .admonition.success,
+.md-typeset details.success {
+  border-left: 0.24rem solid #34d399;
+}
+
+.md-typeset .admonition.warning,
+.md-typeset details.warning {
+  border-left: 0.24rem solid #fbbf24;
+}
+
+.md-typeset .admonition.danger,
+.md-typeset details.danger,
+.md-typeset .admonition.failure,
+.md-typeset details.failure {
+  border-left: 0.24rem solid #f87171;
+}
+
+.ntnx-logoff-btn {
+  margin-left: 0.3rem;
+  margin-right: 0.4rem;
+  padding: 0.35rem 0.7rem;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 0.35rem;
+  color: var(--md-primary-bg-color);
+  text-decoration: none;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.ntnx-logoff-btn:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/* Make logo larger in header and sidebar. */
+.md-header__button.md-logo img,
+.md-nav__button.md-logo img {
+  height: 2rem;
+  width: auto;
+}
+
+/* Hide the top-level Home entry (Docs/index.md) in nav lists. */
+.md-sidebar .md-nav__link[href="."],
+.md-sidebar .md-nav__link[href="./"],
+.md-sidebar .md-nav__link[href="/"] {
+  display: none;
+}
+
+/* Hide section landing-page links (index.md) in nav dropdowns. */
+.md-sidebar .md-nav__link[href="Internal/"],
+.md-sidebar .md-nav__link[href="Technical/"],
+.md-sidebar .md-nav__link[href="/Internal/"],
+.md-sidebar .md-nav__link[href="/Technical/"] {
+  display: none;
+}

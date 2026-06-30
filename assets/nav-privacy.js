@@ -1,4 +1,5 @@
 (function () {
+
   function normalizePath(href) {
     try {
       var url = new URL(href, window.location.href);

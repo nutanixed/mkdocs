@@ -6,7 +6,7 @@
 
     var button = document.createElement("a");
     button.className = "ntnx-logoff-btn";
-    button.href = "https://auth.nutanixed.com/logoff";
+    button.href = "https://auth.nutanixed.com/logout";
     button.textContent = "Log off";
     button.setAttribute("aria-label", "Log off");
 
